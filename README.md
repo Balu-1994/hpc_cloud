@@ -1,4 +1,3 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/guiwitz/hpc_cloud/master)
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/guiwitz/hpc_cloud/main)
 
 # Demo repo for HPC and cloud computing course
