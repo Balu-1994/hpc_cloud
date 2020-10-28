@@ -5,4 +5,4 @@
 
 # Demo repository for HPC and cloud computing course
 
-This is a minimal repository demonstrating how to use GitHub in combination with [binder](https://mybinder.org), Google Colab, Zenodo and Jupyter Book.
+This is a minimal repository demonstrating how to use GitHub in combination with [binder](https://mybinder.org), Google Colab, Zenodo and Jupyter-Book.
