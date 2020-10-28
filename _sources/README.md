@@ -3,6 +3,6 @@
 [![DOI](https://sandbox.zenodo.org/badge/306076532.svg)](https://sandbox.zenodo.org/badge/latestdoi/306076532)
 
 
-# Demo repo for HPC and cloud computing course
+# Demo repository for HPC and cloud computing course
 
 This is a minimal repository demonstrating how to use GitHub in combination with [binder](https://mybinder.org), Google Colab, Zenodo and Jupyter Book.
