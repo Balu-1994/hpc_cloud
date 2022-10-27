@@ -6,13 +6,13 @@ on:
     branches:
     - main
     
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Sets permissions of the GITHUB_TOKEN to allow deployment to Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies, build the book, and pushes it to Pages
 jobs:
   deploy-book:
     environment:
@@ -20,27 +20,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    # Install dependencies
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-    # Build the book
-    - name: Build the book
-      run: |
-        jupyter-book build .
+      - name: Build the book
+        run: |
+          jupyter-book build .
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: '_build/html'
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '_build/html'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
+
